@@ -69,7 +69,6 @@ export default function PersonalityAnalysisPage({
           willChange: 'opacity, transform, filter'
         }}>
           <PersonalityIntro
-            userName="Harry"
             sessionId={sessionId}
             onBeginAnalysis={handleBeginAnalysis}
             animationState={animationState}

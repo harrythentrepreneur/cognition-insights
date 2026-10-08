@@ -25,7 +25,7 @@ interface PersonalityIntroProps {
  * Handles the cinematic animation sequence and transition to the analysis report.
  */
 export default function PersonalityIntro({
-  userName = 'Harry',
+  userName = 'there',
   sessionId,
   onBeginAnalysis,
   animationState,
