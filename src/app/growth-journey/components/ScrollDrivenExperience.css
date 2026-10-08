@@ -1,0 +1,474 @@
+/* Exact CSS from working template */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.project-page {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background-color: #e3e3db;
+  color: #1a1a1a;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1000;
+}
+
+h1 {
+  font-size: 7.5vw;
+  font-weight: 500;
+}
+
+p {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+button {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-family: "Inter", monospace;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  background: none;
+  border: none;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+span {
+  position: relative;
+  top: -0.075em;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0 1em;
+}
+
+.project-nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 1em;
+  opacity: 0;
+  z-index: 2;
+}
+
+.project-nav .link {
+  border-radius: 0.5rem;
+  background-color: #c6c6be;
+}
+
+.project-page-scroll-progress {
+  position: relative;
+  flex: 2;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #c6c6be;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+}
+
+.project-page-scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c6c6be;
+  transform: scaleX(0%);
+  transform-origin: center left;
+  will-change: transform;
+  z-index: -1;
+}
+
+.project-hero,
+.project-footer {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#project-description {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+}
+
+.project-footer-copy {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.project-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+}
+
+.project-img {
+  width: 50%;
+  height: 75svh;
+  background-color: #95958d;
+}
+
+.next-project-progress {
+  position: absolute;
+  bottom: 25%;
+  width: 50%;
+  height: 4px;
+  background-color: #c6c6be;
+}
+
+.next-project-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  transform: scaleX(0%);
+  will-change: transform;
+}
+
+@media (max-width: 900px) {
+  .project-nav {
+    width: 100vw;
+  }
+
+  .project-nav .link {
+    display: none;
+  }
+
+  .project-img {
+    width: 90%;
+  }
+}
+
+/* Scroll-Driven Experience Styles */
+.scroll-driven-container {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #e3e3db;
+  color: #1a1a1a;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.journey-stage-page {
+  position: relative;
+  width: 100%;
+}
+
+/* Stage Navigation */
+.stage-nav {
+  position: fixed;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50vw;
+  display: flex;
+  justify-content: space-between;
+  gap: 2em;
+  padding: 1em;
+  opacity: 0;
+  z-index: 2;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0 1em;
+  border-radius: 0.5rem;
+  background-color: #c6c6be;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #b0b0a8;
+  transform: translateY(-2px);
+}
+
+.nav-link button {
+  background: none;
+  border: none;
+  font-family: "Akkurat Mono", monospace;
+  font-weight: 600;
+  font-size: 14px;
+  color: #1a1a1a;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-font-smoothing: antialiased;
+}
+
+.nav-link span {
+  position: relative;
+  top: -0.075em;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+/* Progress Bar */
+.stage-page-scroll-progress {
+  position: relative;
+  flex: 2;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 0.5rem;
+  border: 1px solid #c6c6be;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(20px);
+}
+
+.stage-page-scroll-progress p {
+  font-size: 16px;
+  font-weight: 500;
+  z-index: 1;
+}
+
+.stage-page-scroll-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #c6c6be;
+  transform: scaleX(0%);
+  transform-origin: center left;
+  will-change: transform;
+  z-index: -1;
+}
+
+/* Stage Hero and Footer */
+.stage-hero,
+.stage-footer {
+  position: relative;
+  width: 100vw;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.stage-hero h1,
+.stage-footer h1 {
+  font-size: 7.5vw;
+  font-weight: 500;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+#stage-description {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  opacity: 0;
+  font-size: 18px;
+  font-weight: 400;
+  max-width: 600px;
+  line-height: 1.6;
+}
+
+.stage-footer-copy {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.stage-footer-copy p {
+  font-size: 16px;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  opacity: 0.7;
+}
+
+/* Stage Images */
+.stage-images {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5em;
+  padding: 5em 0;
+}
+
+.stage-img {
+  width: 50%;
+  height: 75svh;
+  background-color: #95958d;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.stage-img:hover {
+  transform: scale(1.02);
+}
+
+.stage-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Next Stage Progress */
+.next-stage-progress {
+  position: absolute;
+  bottom: 25%;
+  width: 50%;
+  height: 4px;
+  background-color: #c6c6be;
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.next-stage-progress-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #1a1a1a;
+  transform: scaleX(0%);
+  will-change: transform;
+  border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+  .stage-nav {
+    width: 100vw;
+    padding: 0.5em;
+  }
+
+  .nav-link {
+    display: none;
+  }
+
+  .stage-nav .stage-page-scroll-progress {
+    flex: 1;
+  }
+
+  .stage-img {
+    width: 90%;
+  }
+
+  .stage-hero h1,
+  .stage-footer h1 {
+    font-size: 12vw;
+  }
+
+  #stage-description {
+    bottom: 15%;
+    max-width: 90%;
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .stage-nav {
+    gap: 1em;
+  }
+
+  .stage-images {
+    gap: 3em;
+    padding: 3em 0;
+  }
+
+  .stage-img {
+    width: 95%;
+    height: 60svh;
+  }
+
+  .stage-hero h1,
+  .stage-footer h1 {
+    font-size: 15vw;
+    margin-bottom: 1rem;
+  }
+}
+
+/* Smooth scrolling when Lenis is available */
+html.has-scroll-smooth {
+  overflow: hidden;
+}
+
+html.has-scroll-smooth body {
+  overflow: hidden;
+}
+
+#scroll-container {
+  overflow: hidden;
+}
+
+/* Additional styling for better visual hierarchy */
+.stage-hero {
+  background: linear-gradient(135deg, #e3e3db 0%, #f0f0e8 100%);
+}
+
+.stage-footer {
+  background: linear-gradient(135deg, #d4d4cc 0%, #e3e3db 100%);
+}
+
+/* Cinematic entrance animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.stage-hero h1 {
+  animation: fadeInUp 1s ease-out 0.3s both;
+}
+
+.stage-footer h1 {
+  animation: fadeInUp 1s ease-out 0.5s both;
+} 

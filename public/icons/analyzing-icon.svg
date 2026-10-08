@@ -1,0 +1,26 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Brain/Analysis Icon -->
+  <circle cx="40" cy="40" r="35" fill="#FFE0E0" stroke="#3D0000" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Brain shape -->
+  <path d="M25 35C25 28 30 22 37 22C42 22 46 25 48 30C50 25 54 22 59 22C66 22 71 28 71 35C71 40 68 44 64 46C68 48 71 52 71 57C71 64 66 70 59 70C54 70 50 67 48 62C46 67 42 70 37 70C30 70 25 64 25 57C25 52 28 48 32 46C28 44 25 40 25 35Z" fill="#3D0000" opacity="0.8"/>
+  
+  <!-- Neural connections -->
+  <circle cx="35" cy="35" r="2" fill="#FFE0E0"/>
+  <circle cx="45" cy="35" r="2" fill="#FFE0E0"/>
+  <circle cx="40" cy="45" r="2" fill="#FFE0E0"/>
+  <circle cx="35" cy="55" r="2" fill="#FFE0E0"/>
+  <circle cx="45" cy="55" r="2" fill="#FFE0E0"/>
+  
+  <!-- Connection lines -->
+  <line x1="35" y1="35" x2="45" y2="35" stroke="#FFE0E0" stroke-width="1"/>
+  <line x1="40" y1="35" x2="40" y2="45" stroke="#FFE0E0" stroke-width="1"/>
+  <line x1="35" y1="45" x2="35" y2="55" stroke="#FFE0E0" stroke-width="1"/>
+  <line x1="45" y1="45" x2="45" y2="55" stroke="#FFE0E0" stroke-width="1"/>
+  
+  <!-- Pulse animation -->
+  <circle cx="40" cy="40" r="30" fill="none" stroke="#3D0000" stroke-width="1" opacity="0.5">
+    <animate attributeName="r" values="30;35;30" dur="2s" repeatCount="indefinite"/>
+    <animate attributeName="opacity" values="0.5;0.2;0.5" dur="2s" repeatCount="indefinite"/>
+  </circle>
+</svg> 

@@ -1,0 +1,92 @@
+/* Force desktop view on mobile and tablet for emotional-landscapes page */
+@media screen and (max-width: 1024px) {
+  /* Ensure the page renders at desktop width */
+  #emotional-landscapes-viewport-wrapper {
+    min-width: 1440px !important;
+    width: 1440px !important;
+    position: relative;
+    transform-origin: top left;
+  }
+
+  /* Override any mobile-specific styles */
+  .emotional-landscapes-container {
+    width: 100% !important;
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  /* Force chart containers to desktop dimensions */
+  .recharts-responsive-container,
+  .recharts-wrapper,
+  .recharts-surface,
+  canvas {
+    min-width: 100% !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Ensure the timeline chart specifically uses full width */
+  [class*="timeline"],
+  [class*="chart-container"],
+  [class*="visualization"] {
+    min-width: 100% !important;
+    width: 100% !important;
+    max-width: none !important;
+  }
+
+  /* Override any responsive grid layouts */
+  [class*="grid"] {
+    display: grid !important;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)) !important;
+  }
+
+  /* Prevent any flex shrinking */
+  * {
+    flex-shrink: 0 !important;
+  }
+
+  /* Force emotion timeline to desktop width */
+  .emotion-timeline-container {
+    min-width: 1200px !important;
+    width: 1200px !important;
+    overflow: visible !important;
+  }
+  
+  /* Override the D3 SVG dimensions */
+  .emotion-timeline-container svg {
+    min-width: 1200px !important;
+    width: 1200px !important;
+    max-width: none !important;
+  }
+  
+  
+  /* Override any parent containers that might be constraining width */
+  .relative.bg-black\/20 {
+    min-width: 1200px !important;
+    overflow: visible !important;
+  }
+
+  /* Fix the full-width breakout style that's pushing timeline to the right */
+  div[style*="width: 100vw"][style*="calc(50% - 50vw)"] {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Alternative selector for the specific BasePageSection timeline wrapper */
+  div[style*="margin-left: calc(50% - 50vw)"] {
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  
+  /* Fix right sidebar (Timeline/Reflections) alignment to match hamburger menu */
+  div[style*="width: 30%"][style*="flex-direction: column"] {
+    padding-right: 40px !important; /* Match hamburger menu alignment */
+    box-sizing: border-box !important;
+  }
+
+  /* Ensure the chart isn't clipped */
+  [class*="overflow-hidden"],
+  [class*="overflow-x-hidden"] {
+    overflow: visible !important;
+  }
+}

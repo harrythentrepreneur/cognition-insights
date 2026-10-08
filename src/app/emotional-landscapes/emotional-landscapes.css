@@ -1,0 +1,10 @@
+.emotional-landscapes-layout {
+  min-height: 100vh;
+  background-color: #1A1A2E;
+}
+
+/* Apply background to html and body when this layout is active */
+html:has(.emotional-landscapes-layout),
+body:has(.emotional-landscapes-layout) {
+  background-color: #1A1A2E;
+}

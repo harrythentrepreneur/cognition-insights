@@ -1,0 +1,38 @@
+<svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Lightbulb/Insights Icon -->
+  <circle cx="40" cy="40" r="35" fill="#FFE0E0" stroke="#3D0000" stroke-width="2" opacity="0.3"/>
+  
+  <!-- Lightbulb shape -->
+  <path d="M40 15C48 15 55 22 55 30C55 35 52 39 48 42V50C48 52 46 54 44 54H36C34 54 32 52 32 50V42C28 39 25 35 25 30C25 22 32 15 40 15Z" fill="#3D0000" opacity="0.8"/>
+  
+  <!-- Bulb base -->
+  <rect x="34" y="54" width="12" height="6" rx="2" fill="#3D0000" opacity="0.6"/>
+  <rect x="36" y="60" width="8" height="4" rx="2" fill="#3D0000" opacity="0.4"/>
+  
+  <!-- Light rays -->
+  <g stroke="#3D0000" stroke-width="2" opacity="0.6">
+    <line x1="40" y1="8" x2="40" y2="12"/>
+    <line x1="58" y1="22" x2="55" y2="25"/>
+    <line x1="65" y1="40" x2="61" y2="40"/>
+    <line x1="58" y1="58" x2="55" y2="55"/>
+    <line x1="22" y1="22" x2="25" y2="25"/>
+    <line x1="15" y1="40" x2="19" y2="40"/>
+    <line x1="22" y1="58" x2="25" y2="55"/>
+  </g>
+  
+  <!-- Inner glow -->
+  <ellipse cx="40" cy="30" rx="8" ry="10" fill="#FFE0E0" opacity="0.8"/>
+  
+  <!-- Sparkle animation -->
+  <g opacity="0.8">
+    <circle cx="45" cy="25" r="1" fill="#3D0000">
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0s"/>
+    </circle>
+    <circle cx="35" cy="28" r="1" fill="#3D0000">
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="0.5s"/>
+    </circle>
+    <circle cx="42" cy="35" r="1" fill="#3D0000">
+      <animate attributeName="opacity" values="0;1;0" dur="1.5s" repeatCount="indefinite" begin="1s"/>
+    </circle>
+  </g>
+</svg> 

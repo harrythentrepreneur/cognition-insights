@@ -1,0 +1,18 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "functions": {
+    "src/app/api/ad-tracker/extract-ad-raw/route.ts": { "maxDuration": 300 },
+    "src/app/api/ad-tracker/extract-dna/route.ts": { "maxDuration": 300 },
+    "src/app/api/ad-tracker/extract-creative-system/route.ts": { "maxDuration": 300 },
+    "src/app/api/ad-tracker/analyze-creative/route.ts": { "maxDuration": 300 },
+    "src/app/api/ad-tracker/classify-ad-data/route.ts": { "maxDuration": 120 },
+    "src/app/api/ad-tracker/synthesize-brief/route.ts": { "maxDuration": 300 },
+    "src/app/api/ad-tracker/generate-strategy/route.ts": { "maxDuration": 300 },
+    "src/app/api/ad-tracker/generate-text/route.ts": { "maxDuration": 120 },
+    "src/app/api/ad-tracker/meta-creatives/route.ts": { "maxDuration": 120 },
+    "src/app/api/ad-tracker/meta-ad-insights/route.ts": { "maxDuration": 120 },
+    "src/app/api/ad-tracker/stripe-metrics/route.ts": { "maxDuration": 120 },
+    "src/app/api/ad-tracker/backfill-entities/route.ts": { "maxDuration": 300 },
+    "src/app/api/ad-tracker/merge-entities/route.ts": { "maxDuration": 120 }
+  }
+}
